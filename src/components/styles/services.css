@@ -4,7 +4,10 @@
 p {
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.5;
   margin: 0 0 24px;
   text-align: justify;
   text-justify: inter-word; }
+
+.serviceImages {
+  padding: 0.5em; }

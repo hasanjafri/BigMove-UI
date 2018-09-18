@@ -14,12 +14,12 @@ export default class DesktopMenubar extends Component {
       return (
         <Responsive {...Responsive.onlyComputer}>
             <Segment style={{position: 'fixed', top: '0', left: '0', zIndex: '999', width: '100%', padding: '0 0 0 0'}} textAlign="center">
-              <Menu secondary style={{backgroundColor: '#D7E3FC'}}  size='large'>
+              <Menu secondary style={{backgroundColor: '#D7E3FC'}} size='large'>
                   <Container>
                     <Item.Image src={Logo} size="small"/>
                     <Menu.Item as="a" position="right">Home</Menu.Item>
                     <Menu.Item as="a" >About Us</Menu.Item>
-                    <Menu.Item as="a">Services</Menu.Item>
+                    <Menu.Item as="a" onClick={() => history.push('/services')}>Services</Menu.Item>
                     <Menu.Item as="a">News</Menu.Item>
                     <Menu.Item as="a">Contact</Menu.Item>
                   </Container>

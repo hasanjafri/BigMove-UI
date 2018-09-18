@@ -8,7 +8,7 @@ import Hero from './hero';
 import Logo from '../assets/logo.png';
 import trucks from '../assets/trucks.jpeg';
 
-export default class MobileMenubar extends Component {
+export default class TabletMenubar extends Component {
     state = {}
   
     handlePusherClick = () => {
@@ -24,9 +24,9 @@ export default class MobileMenubar extends Component {
       const { sidebarOpened } = this.state
   
       return (
-        <Responsive {...Responsive.onlyMobile}>
+        <Responsive {...Responsive.onlyTablet}>
           <Sidebar.Pushable>
-            <Sidebar width="thin" as={Menu} direction="right" animation='push' inverted vertical visible={sidebarOpened}>
+            <Sidebar width="thin" as={Menu} direction="right" animation='overlay' inverted vertical visible={sidebarOpened}>
               <Menu.Item as="a">Home</Menu.Item>
               <Menu.Item as="a" >About Us</Menu.Item>
               <Menu.Item as="a" onClick={() => history.push('/services')}>Services</Menu.Item>
@@ -54,6 +54,6 @@ export default class MobileMenubar extends Component {
     }
   }
   
-MobileMenubar.propTypes = {
+TabletMenubar.propTypes = {
     children: PropTypes.node,
 }
